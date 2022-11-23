@@ -226,15 +226,15 @@ def main():
 				if len(lst_maquina)<4:
 					print("ERROR! Wrong IPv4!")
 					print("Usage: client.py [maquina IPv4]")
-					#sys.exit(0)
+					sys.exit(0)
 				for element in lst_maquina:
 					if (int(element)<0) or (int(element)>255) or (len(element)>3):
 						print("ERROR! Wrong IPv4!")
 						print("Usage: client.py [maquina IPv4]")
-						#sys.exit(0)
+						sys.exit(0)
 				nome_host = sys.argv[2]
 			else:
-				nome_host = "192.168.1.75"
+				nome_host = "localhost"
 		except:
 			#In case something goes wrong with the fourth argument
 			print("ERROR! Wrong IPv4!")

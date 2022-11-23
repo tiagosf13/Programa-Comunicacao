@@ -127,7 +127,6 @@ def check_id (request):
 def check_password (request):
 	client_id = request["client_id"]
 	password = request["password"]
-	print(read_json("users.json"))
 	if password == read_json("users.json")[client_id]["password"]:
 		dic = { "op": "PASSWORD", "status": True }
 	else:
