@@ -5,6 +5,7 @@ from distutils.command.clean import clean
 from email import message
 from http import client
 from pickle import TRUE
+import random
 import sys
 import socket
 import select
@@ -12,11 +13,8 @@ import os
 import json
 import base64
 import csv
-import random
-from tkinter.tix import Tree
 from typing import KeysView
 from unittest import case
-from client import PURPLE, YELLOW
 from common_comm import send_dict, recv_dict, sendrecv_dict
 from datetime import datetime
 import win32com.client as win32

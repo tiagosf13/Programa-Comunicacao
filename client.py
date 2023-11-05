@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 from cProfile import run
-from ctypes.wintypes import VARIANT_BOOL
 from http import client
 from optparse import OptionContainer
 import os
@@ -50,6 +49,7 @@ def encrypt (cipherkey, data):
 def decrypt (cipherkey, data):
 	cipher = AES.new(cipherkey.encode("utf-8" if os.name == 'nt' else "latin-1"), AES.MODE_ECB)
 	# Decodes a binary string to text
+	print(data)
 	data_decoder = base64.b64decode(data) 
 	data_decrypt = cipher.decrypt(data_decoder)
 	desencriptado = str(data_decrypt, "utf-8" if os.name == 'nt' else "latin-1")
@@ -152,7 +152,7 @@ def run_client (client_sock):
 						sys.exit(3)
 					else:
 						if start_bool == True:
-							mensagem_inicial_encriptada = encrypt(dic1["cipher"], "")
+							mensagem_inicial_encriptada = encrypt(dic1["cipher"], " ")
 							dic = { "op": "TALK", "client_id": client_id, "message" : mensagem_inicial_encriptada }
 							dic = sendrecv_dict(client_sock, dic)
 							for element in dic["message"]:
@@ -232,7 +232,7 @@ def main():
 						print("ERROR! Wrong IPv4!")
 						print("Usage: client.py [maquina IPv4]")
 						sys.exit(0)
-				nome_host = sys.argv[2]
+				nome_host = sys.argv[1]
 			else:
 				nome_host = "localhost"
 		except:
@@ -241,7 +241,7 @@ def main():
 			print("Usage: client.py [maquina IPv4]")
 	
 	hostname = nome_host 
-	port = 1234
+	port = 5005
 
 	print("SERVER IP: "+hostname)
 	print("SERVER PORT: "+str(port))

@@ -13,7 +13,7 @@ def main():
 	tcp_s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
 	tcp_s.bind (("127.0.0.1", 0))
 	# Ligar ao servidor
-	tcp_s.connect (("127.0.0.1", 1234))
+	tcp_s.connect (("0.0.0.0", 1234))
 
 	cipherkey = os.urandom(16)
 	cipherkey_tosend = str (base64.b64encode (cipherkey), "utf8")

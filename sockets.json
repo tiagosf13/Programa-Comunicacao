@@ -1,1 +1,1 @@
-{"Tiago": "<socket.socket fd=196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 23351)>", "Tomas": "<socket.socket fd=1000, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 23347)>"}
+{}

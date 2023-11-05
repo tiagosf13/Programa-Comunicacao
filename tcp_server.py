@@ -8,7 +8,7 @@ from Crypto.Cipher import AES
 
 def main ():
 	tcp_s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
-	tcp_s.bind (("127.0.0.1", 1234))
+	tcp_s.bind (("0.0.0.0", 1234))
 
 	tcp_s.listen ()
 

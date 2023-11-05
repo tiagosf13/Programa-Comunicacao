@@ -1,1 +1,1 @@
-{"Tiago": {"password": "1656", "cipher": "u0Wq0OD0hWdUwM7r5PyEgg==", "socket": "<socket.socket fd=196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 23351)>", "active": false}, "Tomas": {"password": "1647", "cipher": "c067WsnM/r5UanTxuTnu5g==", "socket": "<socket.socket fd=1000, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 23347)>", "active": false}}
+{}
